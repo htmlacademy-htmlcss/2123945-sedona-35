@@ -19,8 +19,8 @@ body {
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
-    background-color: #ffffff;
     color: #000000;
+    background-color: tomato;
 }
 
 .button {
@@ -35,6 +35,17 @@ body {
     text-transform: uppercase;
     border-radius: 4px;
     border: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .page-header {
@@ -218,13 +229,15 @@ body {
     list-style-type: none;
 }
 
-.main-inner-breadcrumbs-link-main {
-    background-image: url(../images/breadcrumbs-house.svg);
-    background-repeat: no-repeat;
+.main-inner-breadcrumbs-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.main-inner-breadcrumbs-link-hotels {
-    font-size: 16px;
+.breadcrumbs-house-img {
+    background-image: url(../images/breadcrumbs-house.svg);
+    background-repeat: no-repeat ;
 }
 
 .filter-catalog {
@@ -253,7 +266,6 @@ body {
 
 .button-filter-submit {
     width: 160px;
-    height: 48px;
     background-color: #82B3D3;
     color: #ffffff;
 }
@@ -285,8 +297,7 @@ body {
     line-height: inherit;
     font-weight: inherit;
     width: 290px;
-    height: 49px;
-    border: E5E5E5;
+    border: #E5E5E5;
     border-radius: 4px;
 }
 
@@ -346,9 +357,12 @@ body {
 
 .catalog-hotel-cards-stars-description {
     background-color: #F2F2F2;
+    color: #333333;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    width: 140px;
+    padding: 9px 22px 8px 23px;
 }
 
 .catalog-pagination-list {
@@ -363,7 +377,6 @@ body {
 
 .catalog-pagination-button {
     width: 60px;
-    height: 60px;
     background-color:#82B3D3;
     padding: 11px 24px 12px 23px;
     margin-right: 8px;
@@ -375,9 +388,33 @@ body {
     color: #000000;
 }
 
+.select-control-group {
+    display: flex;
+}
+
+.select-control-text {
+    color: #333333;
+}
+
 .subscribe-title-inner {
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.field {
+    width: 600px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 491px 19px 22px;
+}
+
+.page-footer {
+    display: flex;
+}
+
+.footer-social-list {
+    display: flex;
 }

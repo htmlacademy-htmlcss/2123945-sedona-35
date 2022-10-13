@@ -78,10 +78,11 @@ body {
 .navigation-list {
     list-style-type: none;
     display: flex;
-    max-width: 480px;
+    max-width: 430px;
     margin: 0;
     padding: 0;
     margin-left: 30px;
+    margin-right: 285px;
 }
 
 .navigation-link {
@@ -90,8 +91,6 @@ body {
     font-weight: 700;
     color: #000000;
     text-decoration: none;
-    text-align: center;
-    display: block;
 }
 
 .navigation-item {
@@ -99,10 +98,6 @@ body {
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
-}
-
-.navigation-item:last-child {
-    padding-right: 62px;
 }
 
 .navigation-actions {
@@ -114,12 +109,20 @@ body {
     margin-left: auto;
 }
 
+.navigation-actions-item {
+    margin: 0;
+    padding: 0;
+}
+
 .navigation-search-link {
     background-image: url("../images/header-search.svg");
     background-repeat: no-repeat;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     display: block;
+    margin: 0;
+    padding: 0;
+    margin: 22px 12px;
 }
 
 .navigation-favourites-link {
@@ -128,6 +131,33 @@ body {
     width: 18px;
     height: 17px;
     display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin: 22px 12px;
+}
+
+.navigation-favourites-round {
+    width: 20px;
+    height: 20px;
+    background-color: #7DB54F;
+    border-radius: 50%;
+    position: relative;
+}
+
+.navigation-favourites-number {
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 10px;
+    position: absolute;
+}
+
+.button-want-here {
+    width: 160px;
+    padding: 8px 34px;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
 }
 
 .page-container {
@@ -196,6 +226,11 @@ body {
     background-color: rgba(131, 179, 211, 0.12);
     width: 400px;
     min-height: 384px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .advantages-item-title {
@@ -204,7 +239,9 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
-    padding: 92px 85px 30px 85px;
+    padding: 0;
+    margin-top: 92px;
+    margin-bottom: 62px;
 }
 
 .advantages-item-text {
@@ -212,59 +249,8 @@ body {
     line-height: inherit;
     font-weight: inherit;
     margin: 0;
-    padding: 0 85px 30px 85px;
-}
-
-.advantages-item-text:last-child {
-    padding-bottom: 92px;
-}
-
-.advantages-item-blue {
-    background-color: #82B3D3;
-    color: #ffffff;
-}
-
-.advantages-item-house {
-    background-image: url("../images/advantages-living.svg");
-    background-repeat: no-repeat;
-    background-position: 163px 80px;
- }
-
- .advantages-item-house > .advantages-item-title {
-    padding: 182px 85px 30px 85px;
- }
-
- .advantages-item-house > .advantages-item-text {
-    padding: 0 85px 81px 85px;
- }
-
- .advantages-item-food > .advantages-item-title {
-    padding: 182px 85px 30px 85px;
- }
-
- .advantages-item-food > .advantages-item-text {
-    padding: 0 85px 81px 85px;
- }
-
- .advantages-item-souvenirs > .advantages-item-title {
-    padding: 182px 85px 30px 85px;
- }
-
- .advantages-item-souvenirs > .advantages-item-text {
-    padding: 0 85px 81px 85px;
- }
-
-.advantages-item-food {
-    background-image: url("../images/advantages-food.svg");
-    background-repeat: no-repeat;
-    background-color: #ffffff;
-    background-position: 163px 81px;
-}
-
-.advantages-item-souvenirs {
-    background-image: url("../images/advantages-souvenirs.svg");
-    background-repeat: no-repeat;
-    background-position: 168px 78px;
+    padding: 0;
+    margin-bottom: 111px;
 }
 
 .advantages-item-img {
@@ -273,29 +259,43 @@ body {
     display: block;
 }
 
+.advantages-item-blue {
+    background-color: #82B3D3;
+    color: #ffffff;
+}
+
+/* Исправить секцию преимуществ*/
+
 .advantages-item-light-blue {
     background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item-light-blue > .advantages-item-title {
-    padding-top: 103px;
+.advantages-item-row-2 < .advantages-item-title {}
+
+.advantages-item-img-house {
+    background-image: url("../images/advantages-living.svg");
+    background-repeat: no-repeat;
+    background-position: 163px 80px;
+ }
+
+ .advantages-item-img-house < .advantages-item-title {
+    margin-top: 182px;
+    margin-bottom: 30px;
+ }
+
+.advantages-item-img-food {
+    background-image: url("../images/advantages-food.svg");
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-position: 163px 81px;
 }
 
-.advantages-item-light-blue > .advantages-item-text:last-child {
-    padding-bottom: 102px;
+.advantages-item-img-souvenirs {
+    background-image: url("../images/advantages-souvenirs.svg");
+    background-repeat: no-repeat;
+    background-position: 168px 78px;
 }
 
-.advantages-item-padding > .advantages-item-title {
-    padding: 103px 85px 30px 85px;
- }
-
-.advantages-item-padding > .advantages-item-text {
-    padding: 0 85px 30px 85px;
- }
-
- .advantages-item-padding > .advantages-item-text:last-child {
-    padding: 0 85px 102px 85px;
- }
 
 .search {
     width: 1200px;
@@ -343,6 +343,8 @@ body {
     color:#ffffff;
     background-color: #82B3D3;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .subscribe-title {
@@ -350,20 +352,35 @@ body {
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 94px 398px 29px;
-    margin: 0;
+    margin-top: 96px;
+    margin-bottom: 20px;
 }
 
 .subscribe-text {
     font-size: 22px;
     line-height: 26px;
+    margin: 0;
+    margin-bottom: 54px;
+    padding: 0;
 }
 
 .subscribe-button {
     font-size: 20px;
     line-height: 36px;
     background-color: #82B3D3;
+    border-radius: 4px;
+    width: 232px;
+    padding: 8px 50px;
+}
+
+.field {
+    width: 452px;
+    min-height: 52px;
+    background-color: #F2F2F2;
+    border: none;
     border-radius: 10px;
+    border-radius: 4px;
+    margin-right: 0;
 }
 
 .page-footer {
@@ -773,32 +790,4 @@ body {
 
 .select-control-text {
     color: #333333;
-}
-
-.subscribe-inner {
-    width: 1200px;
-    min-height: 411px;
-    text-align: center;
-}
-
-.subscribe-title-inner {
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 94px 398px 29px 398px;
-    text-align: center;
-}
-
-.subscribe-text {
-    padding: 0 361px 46px 363px;
-}
-
-.field {
-    width: 600px;
-    background-color: #F2F2F2;
-    border: none;
-    border-radius: 10px;
-    padding: 20px 491px 19px 22px;
 }

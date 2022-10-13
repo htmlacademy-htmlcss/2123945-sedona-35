@@ -65,6 +65,7 @@ body {
 
 .navigation-menu {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 1060px;
 }
@@ -76,11 +77,12 @@ body {
 }
 
 .navigation-list {
-    list-style-type: none;
-    display: flex;
-    max-width: 430px;
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 430px;
     margin-left: 30px;
     margin-right: 285px;
 }
@@ -91,6 +93,8 @@ body {
     font-weight: 700;
     color: #000000;
     text-decoration: none;
+    min-width: 100px;
+    min-height: 64px;
 }
 
 .navigation-item {
@@ -102,6 +106,7 @@ body {
 
 .navigation-actions {
     display: flex;
+    flex-wrap: wrap;
     max-width: 300px;
     margin: 0;
     padding: 0;
@@ -123,6 +128,8 @@ body {
     margin: 0;
     padding: 0;
     margin: 22px 12px;
+    /*min-width: 44px;
+    min-height: 64px;*/
 }
 
 .navigation-favourites-link {
@@ -135,6 +142,8 @@ body {
     margin: 0;
     padding: 0;
     margin: 22px 12px;
+    /*min-width: 44px;
+    min-height: 64px;*/
 }
 
 .navigation-favourites-round {
@@ -185,6 +194,7 @@ body {
     width: 1200px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: 0 auto;
     min-width: 282px;
 }
@@ -302,6 +312,7 @@ body {
     min-height: 406px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -345,6 +356,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .subscribe-title {
@@ -396,24 +408,25 @@ body {
     margin: 0 auto;
     padding: 40px 70px 30px;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .footer-social-list {
     display: flex;
+    flex-wrap: wrap;
     width: 142px;
-    list-style-type: none;
+    min-height: 40px;
     margin: 0;
     padding: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 41px;
-   }
+    list-style-type: none;
+    margin-right: auto;
+ }
 
 .footer-social-item-vk,
 .footer-social-item-telegram,
 .footer-social-item-youtube {
     width: 47px;
+    height: 40px;
     padding: 0;
     margin: 0;
 }
@@ -439,21 +452,16 @@ body {
     font-style: normal;
     text-decoration: none;
     color: #000000;
-    width: 720px;
-    margin-left: 41px;
-    margin-right: 41px;
-    text-align: center;
-    padding: 40px 41px 30px 41px;
-    display: block;
+    min-width: 720px;
+    min-height: 50px;
 }
 
 .copyright-logo-img {
     width: 115px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 41px;
-    }
-
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 /*Страница каталога */
 

@@ -56,6 +56,8 @@ body {
     overflow: hidden;
 }
 
+/* Редактировать поиск*/
+
 .page-header {
     width: 1200px;
     background-color: #ffffff;
@@ -272,15 +274,10 @@ body {
 .advantages-item-blue {
     background-color: #82B3D3;
     color: #ffffff;
+    background-image: url("../images/advantages-line-white.svg");
+    background-repeat: no-repeat;
+    background-position: 170px 178px;
 }
-
-/* Исправить секцию преимуществ*/
-
-.advantages-item-light-blue {
-    background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantages-item-row-2 < .advantages-item-title {}
 
 .advantages-item-img-house {
     background-image: url("../images/advantages-living.svg");
@@ -288,24 +285,66 @@ body {
     background-position: 163px 80px;
  }
 
- .advantages-item-img-house < .advantages-item-title {
+ .advantages-item-img-house .advantages-item-title {
     margin-top: 182px;
     margin-bottom: 30px;
+ }
+
+ .advantages-item-img-house .advantages-item-text {
+    margin-bottom: 81px;
  }
 
 .advantages-item-img-food {
     background-image: url("../images/advantages-food.svg");
     background-repeat: no-repeat;
     background-color: #ffffff;
-    background-position: 163px 81px;
+    background-position: 162px 80px;
 }
+
+.advantages-item-img-food .advantages-item-title {
+    margin-top: 182px;
+    margin-bottom: 30px;
+ }
+
+ .advantages-item-img-food .advantages-item-text {
+    margin-bottom: 81px;
+ }
 
 .advantages-item-img-souvenirs {
     background-image: url("../images/advantages-souvenirs.svg");
     background-repeat: no-repeat;
-    background-position: 168px 78px;
+    background-position: 162px 80px;
 }
 
+.advantages-item-img-souvenirs .advantages-item-title {
+    margin-top: 182px;
+    margin-bottom: 30px;
+ }
+
+ .advantages-item-img-souvenirs .advantages-item-text {
+    margin-bottom: 81px;
+ }
+
+.advantages-item-row-2 {
+    background-image: url("../images/advantages-line-grey.svg");
+    background-repeat: no-repeat;
+    background-position: 170px 189px;
+    margin: 0;
+    padding: 0;
+}
+
+.advantages-item-row-2 .advantages-item-title {
+    margin-top: 103px;
+    margin-bottom: 62px;
+}
+
+.advantages-item-row-2 .advantages-item-text {
+    margin-bottom: 121px;
+ }
+
+.advantages-item-light-blue {
+    background-color: rgba(131, 179, 211, 0.2);
+}
 
 .search {
     width: 1200px;
@@ -344,6 +383,8 @@ body {
     border: #000000;
     padding: 8px 50px;
 }
+
+/* Редактировать форму*/
 
 .subscribe {
     background-image: url("../images/subscribe-background.jpg");

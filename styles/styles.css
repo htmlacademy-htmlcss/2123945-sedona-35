@@ -81,8 +81,6 @@ body {
     display: block;
     width: 139px;
     position: relative;
-    z-index: 1;
-    margin-bottom: -6px;
 }
 
 .navigation-list {
@@ -213,6 +211,7 @@ body {
     width: 1200px;
     height: 485px;
     text-align: center;
+    margin-top: -6px;
 }
 
 .main-banner-img {
@@ -433,15 +432,27 @@ body {
 .subscribe{
     background-image: url("../images/subscribe-background.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     width: 1200px;
-    height: 411px;
+    margin: 0 auto;
+    min-height: 414px;
     color:#ffffff;
     background-color: #82B3D3;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    justify-content: center;
+}
+
+.subscribe-wrapper {
+    width: 684px;
+    min-width: 214px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .subscribe-title {
@@ -463,16 +474,56 @@ body {
 }
 
 .subscribe-form {
+    width: 684px;
+    display: flex;
+    flex-grow: 1;
 }
 
+.subscribe-form .field {
+    width: 452px;
+    font: inherit;
+    line-height: 24px;
+    min-height: 52px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    margin-right: 0;
+    margin-bottom: 104px;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
 
+.subscribe-form .field:hover {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: rgba(230, 230, 230, 1);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.subscribe-form .field:focus {
+  background-color: rgba(230, 230, 230, 1);
+  outline: 3px solid rgba(131, 179, 211, 1);
+}
+
+.subscribe-form .field:active {
+  outline: 2px solid #000000;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.subscribe-form .field::placeholder {
+  color: #000000;
+  opacity: .6;
+}
 
 .subscribe-button {
     font-size: 20px;
     line-height: 36px;
     background-color: #82B3D3;
-    border-radius: 4px;
+    border-radius: 0 4px 4px 0;
     width: 232px;
+    height: 52px;
     padding: 8px 50px;
 }
 
@@ -488,17 +539,6 @@ body {
 
 .subscribe-button:disabled {
   background-color: #E5E5E5;
-}
-
-.field {
-    width: 452px;
-    min-height: 52px;
-    background-color: #F2F2F2;
-    border: none;
-    border-radius: 10px;
-    border-radius: 4px;
-    margin-right: 0;
-    margin-bottom: 104px;
 }
 
 .page-footer {
@@ -612,6 +652,7 @@ body {
     color: #ffffff;
     width: 1200px;
     height: 412px;
+    margin-top: -6px;
 }
 
 .title-breadcrumbs-wrapper {
@@ -620,6 +661,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .main-inner-title {
@@ -629,7 +671,6 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 35px;
-    padding-left: 70px;
     padding-bottom: 8px;
 }
 
@@ -637,9 +678,10 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: 114px;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding-left: 70px;
     align-items: center;
 }
 
@@ -647,7 +689,6 @@ body {
     display: block;
     width: 12px;
     height: 12px;
-    margin-right: 10px;
     fill: #ffffff;
 }
 
@@ -666,10 +707,10 @@ body {
 .main-inner-breadcrumbs-arrow {
   background-image: url("../images/breadcrumbs-arrow.svg");
   background-repeat: no-repeat;
+  background-position: center;
   display: block;
   width: 6px;
   height: 9px;
-  margin-right: 10px;
 }
 
 .main-inner-breadcrumbs-link {
@@ -691,19 +732,20 @@ body {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.fieldset-wrapper {
-    width: 370px;
-    margin-left: 70px;
-    margin-top: 40px;
-    display: flex;
-}
-
 .filter-catalog {
     display: flex;
     justify-content: space-between;
-    width: 370px;
-    margin: 0;
+    width: 1060px;
+    margin: 0 auto;
     padding: 0;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.fieldset-wrapper {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .filter-fieldset-group {
@@ -712,6 +754,13 @@ body {
     padding: 0;
     width: 150px;
     min-height: 157px;
+}
+
+.filter-fieldset-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 32px;
 }
 
 .filter-fieldset-list {
@@ -728,30 +777,30 @@ body {
     padding-bottom: 0;
 }
 
-.filter-fieldset-title {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 700;
-    padding-bottom: 32px;
+.price-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  width: 288px;
 }
 
 .price-buttons-wrapper {
     width: 549px;
     min-height: 160px;
     display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
 
-.price {
-    width: 288px;
-    margin-left: 140px;
-}
-
-.price-title {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 700;
+.buttons-filter-wrapper {
+  width: 191px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 56px;
+  padding-left: 70px;
 }
 
 .button-filter-submit {
@@ -760,6 +809,7 @@ body {
     background-color: #82B3D3;
     color: #ffffff;
     justify-content: center;
+    margin-bottom: 32px;
 }
 
 .button-filter-submit:hover,
@@ -777,18 +827,18 @@ body {
 }
 
 .button-filter-reset {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    text-transform: capitalize;
-    background-color: transparent;
-    border: none;
-    width: 191px;
-    min-height: 36px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  width: 191px;
+  min-height: 36px;
 }
 
 .button-filter-reset:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .button-filter-reset:active {
@@ -837,7 +887,7 @@ body {
     line-height: 21px;
     font-weight: inherit;
     width: 292px;
-    border: 2px solid rgba(229, 229, 229, 1);
+    outline: 2px solid rgba(229, 229, 229, 1);
     border-radius: 4px;
     padding-left: 20px;
     padding-top: 14px;
@@ -846,15 +896,15 @@ body {
 
 .catalog-sorting-select-control:hover,
 .catalog-sorting-select-control:focus {
-  border: 2px solid rgba(104, 162, 202, 1);
+  outline: 2px solid rgba(104, 162, 202, 1);
 }
 
 .catalog-sorting-select-control:active {
-  border: 2px solid rgba(63, 94, 114, 1);
+  outline: 2px solid rgba(63, 94, 114, 1);
 }
 
 .catalog-sorting-select-control:disabled {
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  outline: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -875,7 +925,7 @@ body {
   justify-content: center;
   width: 48px;
   height: 48px;
-  border: 2px solid #E5E5E5;
+  outline: 2px solid #E5E5E5;
   border-radius: 4px;
   margin: 0;
   margin-right: 8px;
@@ -884,19 +934,19 @@ body {
 
 .card-grid-toggle:hover,
 .card-grid-toggle:active {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 
 .card-grid-toggle:focus {
-  border: 2px solid rgba(104, 162, 202, 1);
+  outline: 2px solid rgba(104, 162, 202, 1);
 }
 
-.card-grid-toggle:nth-child (3) {
+.card-grid-toggle:nth-child(3) {
   margin-right: 0;
 }
 
 .card-grid-toggle-current {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 
 .hotel-cards-list {
@@ -914,7 +964,7 @@ body {
   gap: 16px 20px;
   width: 340px;
   min-height: 438px;
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #E6E6E6;
   border-radius: 4px;
   justify-content: center;
   padding-top: 20px;
@@ -1044,14 +1094,6 @@ body {
   background-color: #E5E5E5;
 }
 
-
-
-
-
-
-
-
-
 .hotel-cards-stars-img {
     display: block;
 }
@@ -1149,7 +1191,7 @@ body {
 /* Подпишитесь на рассылку */
 
 .subscribe-inner {
-    width: 1200px;
+    width: 684px;
     margin: 0 auto;
     min-height: 414px;
     background-color: #ffffff;

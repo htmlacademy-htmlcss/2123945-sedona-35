@@ -56,12 +56,11 @@
                     </ul>
                 </div>
 
-                <div class="fieldset-wrapper">
-
                     <h2 class="filter-title visually-hidden">Фильтр гостиниц по инфраструктуре и типу жилья</h2>
 
                     <form class="filter-catalog" action="https://echo.htmlacademy.ru/" method="get">
 
+                      <div class="fieldset-wrapper">
                         <fieldset class="filter-fieldset-group">
                             <legend class="filter-fieldset-title">Инфраструктура:</legend>
 
@@ -103,15 +102,18 @@
                                 </li>
                             </ul>
                         </fieldset>
+                        </div>
 
-                    <div class="price">
-                        <p class="price-title">Стоимость, &#x20bd;</p>
-                    </div>
+                    <div class="price-buttons-wrapper">
+                    <p class="price-title">Стоимость, &#x20bd;</p>
 
+                    <div class="buttons-filter-wrapper">
                     <button class="button button-filter-submit" type="submit">Применить</button>
                     <button class="button button-filter-reset" type="reset">Сбросить</button>
+                    </div>
+                    </div>
                     </form>
-                </div>
+
             </section>
 
         <section class="catalog" data-test="catalog">
@@ -196,15 +198,14 @@
 
             <div class="catalog-pagination-container">
 
-  <ul class="pagination-list">
+              <ol class="pagination-list">
                     <li class="pagination-item"><a class="pagination-current" href=""><span class="visually-hidden">страница 1</span>1</a></li>
                     <li class="pagination-item"><a class="catalog-pagination-button" href=""><span class="visually-hidden">страница 2</span>2</a></li>
                     <li class="pagination-item"><a class="catalog-pagination-button" href=""><span class="visually-hidden">страница 3</span>3</a></li>
                     <li class="pagination-item"><a class="catalog-pagination-button" href=""><span class="visually-hidden">страница 4</span>4</a></li>
                     <li class="pagination-item"><a class="pagination-more" href=""><span>...</span></span><span class="visually-hidden">Показать больше</span></a></li>
                     <li class="pagination-item"><a class="catalog-pagination-button" href=""><span class="visually-hidden">страница 10</span>10</a></li>
-
-                </ul>
+              </ol>
             </div>
           </section>
 
@@ -212,8 +213,9 @@
             <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
             <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="subscribe-email">Email</label>
               <input class="field" type="email" placeholder="Ваш e-mail" id="subscribe-email" name="Ваш e-mail">
-              <button class="button subscribe-button" type="submit">Подписаться</button>
+                <button class="button subscribe-button" type="submit">Подписаться</button>
             </form>
         </section>
         </div>

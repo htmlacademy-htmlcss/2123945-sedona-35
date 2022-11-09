@@ -109,12 +109,12 @@ body {
 .navigation-link-current::before {
     content: "";
     background-color: #756257;
-    width: 93px;
+    width: 100%;
     height: 2px;
     margin-top: 21px;
     position: absolute;
-    bottom:-5px;
-    left: 10px;
+    bottom:3px;
+    left: 18px;
     z-index: 1;
 }
 
@@ -731,7 +731,7 @@ body {
 .main-inner-breadcrumbs-link:active {
     color: rgba(255, 255, 255, 0.3);
 }
-
+/*ОДНА БОЛЬШАЯ ФОРМА*/
 .filter-catalog {
     display: flex;
     justify-content: space-between;
@@ -742,18 +742,19 @@ body {
     margin-bottom: 70px;
 }
 
-.fieldset-wrapper {
+/*ОБЕРТКА ПЕРВОЙ ГРУППЫ ФИЛДСЕТОВ*/
+.fieldset-wrapper-1 {
     width: 370px;
     display: flex;
     justify-content: space-between;
 }
 
-.filter-fieldset-group {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 150px;
-    min-height: 157px;
+.fieldset-wrapper-1 .filter-fieldset-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  min-height: 157px;
 }
 
 .filter-fieldset-title {
@@ -764,35 +765,110 @@ body {
 }
 
 .filter-fieldset-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .filter-fieldset-item {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .filter-fieldset-item:last-child {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
-.price-title {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
+/*ОБЕРТКА ВТОРОЙ ГРУППЫ ФИЛДСЕТОВ*/
+.fieldset-wrapper-2 {
+  width: 549px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-fieldset-group {
+  border: none;
   margin: 0;
   padding: 0;
-  width: 288px;
 }
 
-.price-buttons-wrapper {
-    width: 549px;
-    min-height: 160px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
+.filter-fieldset-group:nth-child(3) {
+margin-left: 140px;
+display: flex;
+flex-direction: column;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.catalog-filter-label {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.range-input {
+  width: 143px;
+  min-height: 48px;
+  margin-bottom: 36px;
+  border-radius: 4px 0 0 4px;
+  font: inherit;
+  text-align: center;
+  background-color: #F2F2F2;
+  border: none;
+}
+
+.range-input:nth-child(2) {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/*ШКАЛА*/
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #ffffff;
+  top: -7px;
+  width: 300px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: white;
+  opacity: 1;
+  z-index: 1;
+}
+
+.range-toggle {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  opacity: 100%;
+  border-radius: 5px;
+  border: none;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0px;
+}
+.toggle-max {
+  top: -8px;
+  right: -20px;
 }
 
 .buttons-filter-wrapper {
@@ -800,7 +876,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 56px;
-  padding-left: 70px;
+  margin-left: 70px;
 }
 
 .button-filter-submit {
@@ -878,6 +954,45 @@ body {
     width: 338px;
     display: flex;
     align-items: center;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.filter-fieldset-group:nth-child(1) .control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color:#ffffff;
+}
+
+.filter-fieldset-group:nth-child(1) .control-mark::before {
+  background-image: url("../images/fieldset-mark-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-fieldset-group:nth-child(2) .control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color:#ffffff;
+  background-image: url("../images/fieldset-mark-2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-label {
+  line-height: 23px;
 }
 
 .catalog-sorting-select-control {

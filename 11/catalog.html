@@ -3,13 +3,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>HTML Academy: Седона каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <base href="https://htmlacademy-htmlcss.github.io/2123945-sedona-35/11/">
 </head>
 
   <body>
-
+    <!--ПОДКЛЮЧИТЬ ТЕНИ-->
     <header class="page-header" data-test="header">
 
       <nav class="navigation-menu">
@@ -21,19 +22,21 @@
           <li class="navigation-item"><a class="navigation-link" href="about.html">О Седоне</a></li>
           <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a></li>
         </ul>
-
+    <!--ДОБАВИТЬ СОСТОЯНИЯ-->
         <ul class="navigation-actions">
           <li class="navigation-actions-item"><a class="navigation-search-link" href="#">
             <svg class="navigation-icon" aria-label="Поиск" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" fill="#000"/>
+              <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
             </svg></a>
           </li>
 
           <li class="navigation-actions-item"><a class="navigation-favourites-link" href="#">
             <svg class="navigation-icon" aria-label="Избранное" width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" fill="#000"/>
-            </svg></a>
-            </li>
+              <path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+            </svg>
+              <div class="circle"><span class="navigation-favourites">12</span></div>
+            </a>
+          </li>
 
           <li class="navigation-actions-item"><button class="button button-want-here" type="button">Хочу сюда!</button></li>
 
@@ -58,10 +61,10 @@
                 </div>
 
 
-                <!--ОДНА БОЛЬШАЯ ФОРМА-->
-                <form class="filter-catalog" action="https://echo.htmlacademy.ru/" method="get">
-                  <h2 class="filter-title visually-hidden">Фильтр гостиниц по инфраструктуре и типу жилья</h2>
+<!--ДОДЕЛАТЬ ФОРМУ-->
+  <h2 class="filter-title visually-hidden">Фильтр гостиниц по инфраструктуре и типу жилья</h2>
 
+  <form class="filter-catalog" action="https://echo.htmlacademy.ru/" method="get">
                     <div class="fieldset-wrapper-1">
 
                       <fieldset class="filter-fieldset-group">
@@ -100,7 +103,7 @@
                           <ul class="filter-fieldset-list">
                             <li class="filter-fieldset-item">
                               <label class="control">
-                                <input class="visually-hidden control-input" type="checkbox" name="Гостиница" checked>
+                                <input class="visually-hidden control-input" type="radio" name="Гостиница" checked>
                                 <span class="control-mark"></span>
                                 <span class="control-label">Гостиница</span>
                               </label>
@@ -108,7 +111,7 @@
 
                             <li class="filter-fieldset-item">
                               <label class="control">
-                                <input class="visually-hidden control-input" type="checkbox" name="Мотель">
+                                <input class="visually-hidden control-input" type="radio" name="Мотель">
                                 <span class="control-mark"></span>
                                 <span class="control-label">Мотель</span>
                               </label>
@@ -116,7 +119,7 @@
 
                             <li class="filter-fieldset-item">
                               <label class="control">
-                                <input class="visually-hidden control-input" type="checkbox" name="Апартаменты">
+                                <input class="visually-hidden control-input" type="radio" name="Апартаменты">
                                 <span class="control-mark"></span>
                                 <span class="control-label">Апартаменты</span>
                               </label>
@@ -128,23 +131,24 @@
                       <fieldset class="filter-fieldset-group">
                         <legend class="filter-fieldset-title">Стоимость, &#x20bd;</legend>
 
+                        <div class="range">
                           <div class="range-wrapper-inputs">
-                            <label class="catalog-filter-label">от<input class="range-input" type="number" value="0" name="min-price"></label>
-                            <label class="catalog-filter-label">до<input class="range-input" type="number" value="9000" name="max-price" style="right: 60px"></label>
+                            <label class="filter-label-left" for="range-label-left">от</label>
+                            <input class="range-input range-input-left" type="text" value="0" name="min-price" id="range-label-left">
+                            <label class="filter-label-right" for="range-label-right">до</label>
+                            <input class="range-input range-input-right" type="text" value="9000" name="max-price" id="range-label-right">
                           </div>
 
                           <div class="range-scale">
 
-                            <button type="button" class="range-toggle toggle-min">
-                              <span class="visually-hidden">Изменить минимальную цену</span>
-                            </button>
-                            <div class="range-bar" style="left: 0; width: 226px">
-                                 <button type="button" class="range-toggle toggle-max">
-                                <span class="visually-hidden">Изменить максимальную цену</span>
-                              </button>
+                            <div class="range-bar" style="left: 0; width: 216px;">
+                              <button type="button" class="range-toggle toggle-min"><span class="visually-hidden">Изменить минимальную цену</span></button>
+                              <button type="button" class="range-toggle toggle-max"><span class="visually-hidden">Изменить максимальную цену</span></button>
                             </div>
                           </div>
-                  </fieldset>
+                        </div>
+
+                      </fieldset>
 
                     <div class="buttons-filter-wrapper">
                       <button class="button button-filter-submit" type="submit">Применить</button>
@@ -164,6 +168,7 @@
                 <select class="catalog-sorting-select-control" aria-label="Сортировка">
                     <option value="cheap">Сначала дешевые</option>
                     <option value="expensive">Сначала дорогие</option>
+                    <option value="popular">Сначала популярные</option>
                 </select>
 
                 <ul class="catalog-sorting-view-list">

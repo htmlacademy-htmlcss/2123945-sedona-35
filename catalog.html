@@ -18,15 +18,18 @@
 
         <ul class="navigation-list">
           <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="about.html">О Седоне</a></li>
-          <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">О Седоне</a></li>
+          <li class="navigation-item"><a class="navigation-link navigation-link-current">Гостиницы</a></li>
         </ul>
-    <!--ДОБАВИТЬ СОСТОЯНИЯ-->
+
         <ul class="navigation-actions">
-          <li class="navigation-actions-item"><a class="navigation-search-link" href="#">
-            <svg class="navigation-icon" aria-label="Поиск" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
-            </svg></a>
+          <li class="navigation-actions-item">
+            <a class="navigation-search-link" href="#">
+              <svg class="navigation-icon" aria-label="Поиск" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" fill="#000"/>
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+            </a>
           </li>
 
           <li class="navigation-actions-item"><a class="navigation-favourites-link" href="#">
@@ -131,20 +134,22 @@
                         <legend class="filter-fieldset-title">Стоимость, &#x20bd;</legend>
 
                         <div class="range">
+
                           <div class="range-wrapper-inputs">
                             <label class="filter-label-left" for="range-label-left">от</label>
                             <input class="range-input range-input-left" type="text" value="0" name="min-price" id="range-label-left">
+
                             <label class="filter-label-right" for="range-label-right">до</label>
                             <input class="range-input range-input-right" type="text" value="9000" name="max-price" id="range-label-right">
                           </div>
 
                           <div class="range-scale">
-
                             <div class="range-bar" style="left: 0; width: 216px;">
                               <button type="button" class="range-toggle toggle-min"><span class="visually-hidden">Изменить минимальную цену</span></button>
                               <button type="button" class="range-toggle toggle-max"><span class="visually-hidden">Изменить максимальную цену</span></button>
                             </div>
                           </div>
+
                         </div>
 
                       </fieldset>
@@ -257,7 +262,7 @@
             <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="subscribe-email">Email</label>
-              <input class="field" type="email" placeholder="Ваш e-mail" id="subscribe-email" name="Ваш e-mail">
+              <input class="field" type="text" placeholder="Ваш e-mail" id="subscribe-email" name="Ваш e-mail">
                 <button class="button subscribe-button" type="submit">Подписаться</button>
             </form>
         </section>
@@ -305,5 +310,19 @@
       </div>
 
       </footer>
+
+      <div class="modal-container">
+
+        <div class="modal modal-auth">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          </section>
+
+        </div>
+
+      </div>
     </body>
   </html>

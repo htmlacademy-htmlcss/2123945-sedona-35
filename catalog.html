@@ -18,15 +18,18 @@
 
         <ul class="navigation-list">
           <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="about.html">О Седоне</a></li>
-          <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">О Седоне</a></li>
+          <li class="navigation-item"><a class="navigation-link navigation-link-current">Гостиницы</a></li>
         </ul>
-    <!--ДОБАВИТЬ СОСТОЯНИЯ-->
+
         <ul class="navigation-actions">
-          <li class="navigation-actions-item"><a class="navigation-search-link" href="#">
-            <svg class="navigation-icon" aria-label="Поиск" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
-            </svg></a>
+          <li class="navigation-actions-item">
+            <a class="navigation-search-link" href="#">
+              <svg class="navigation-icon" aria-label="Поиск" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" fill="#000"/>
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+            </a>
           </li>
 
           <li class="navigation-actions-item"><a class="navigation-favourites-link" href="#">
@@ -131,20 +134,22 @@
                         <legend class="filter-fieldset-title">Стоимость, &#x20bd;</legend>
 
                         <div class="range">
+
                           <div class="range-wrapper-inputs">
                             <label class="filter-label-left" for="range-label-left">от</label>
                             <input class="range-input range-input-left" type="text" value="0" name="min-price" id="range-label-left">
+
                             <label class="filter-label-right" for="range-label-right">до</label>
                             <input class="range-input range-input-right" type="text" value="9000" name="max-price" id="range-label-right">
                           </div>
 
                           <div class="range-scale">
-
                             <div class="range-bar" style="left: 0; width: 216px;">
                               <button type="button" class="range-toggle toggle-min"><span class="visually-hidden">Изменить минимальную цену</span></button>
                               <button type="button" class="range-toggle toggle-max"><span class="visually-hidden">Изменить максимальную цену</span></button>
                             </div>
                           </div>
+
                         </div>
 
                       </fieldset>
@@ -257,7 +262,7 @@
             <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="subscribe-email">Email</label>
-              <input class="field" type="email" placeholder="Ваш e-mail" id="subscribe-email" name="Ваш e-mail">
+              <input class="field" type="text" placeholder="Ваш e-mail" id="subscribe-email" name="Ваш e-mail">
                 <button class="button subscribe-button" type="submit">Подписаться</button>
             </form>
         </section>
@@ -305,5 +310,73 @@
       </div>
 
       </footer>
-    </body>
-  </html>
+
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-auth">
+          <button class="modal-close-button" type="button">
+            <svg class="close" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="close-circle" cx="26" cy="26" r="26" fill="#F2F2F2" />
+              <path class="close-cross"
+                d="m33.49 20.783-1.292-1.292-5.707 5.707-5.708-5.707-1.293 1.292 5.708 5.708-5.707 5.707 1.292 1.293 5.707-5.708 5.708 5.708 1.292-1.293-5.707-5.707 5.707-5.708Z"
+                fill="#000" />
+            </svg>
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="field-group">
+                <label for="check-in">Дата заезда:</label>
+                <input class="auth-form-field field" type="text" id="check-in" name="chech-in" placeholder="27 апреля 2020">
+                <span class="error-message error-message-red">Мы не можем отправить вас в прошлое.</span>
+              </p>
+              <p class="field-group">
+                <label for="check-out">Дата выезда:</label>
+                <input class="auth-form-field field" type="text" id="check-out" name="check-out"
+                  placeholder="1 сентября 2023">
+                <span class="error-message">На эти даты есть свободные номера. Пока есть.</span>
+              </p>
+              <div class="form-div">
+                <p class="field-group">
+                  <label class="adults" for="adults">Взрослые:</label>
+                  <input class="input-number field" type="text" id="adults" name="adults" placeholder="2">
+                  <button class="control-score minus" type="button">
+                    <span class="control-score-minus"></span>
+                  </button>
+                  <button class="control-score plus" type="button">
+                    <span class="control-score-plus"></span>
+                    <span class="control-score-minus"></span>
+                  </button>
+                </p>
+                <p class="field-group">
+                  <span class="kids">
+                    <label class="kids" for="kids">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-kids">
+                        <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff" />
+                        </svg>
+                      </button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-kids">Укажите количество детей, <br> которые
+                        будут с вами, возраст <br> которых от 6 до 18 лет. Дети <br> до 6 лет размещаются <br> бесплатно.</span>
+                    </span>
+                  </span>
+                  <input class="input-number field" type="text" id="kids" name="kids" placeholder="2">
+                  <button class="control-score minus-2" type="button">
+                    <span class="control-score-minus"></span>
+                  </button>
+                  <button class="control-score plus-2" type="button">
+                    <span class="control-score-plus"></span>
+                    <span class="control-score-minus"></span>
+                  </button>
+                </p>
+              </div>
+              <button class="button auth-form-button" type="submit">Найти</button>
+            </form>
+
+        </div>
+      </div>
+</body>
+
+</html>
